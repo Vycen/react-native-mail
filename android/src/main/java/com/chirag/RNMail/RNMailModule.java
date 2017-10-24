@@ -54,7 +54,6 @@ public class RNMailModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void mail(ReadableMap options, Callback callback) {
     Intent i;
-    i.setData(Uri.parse("mailto:"));
     if (options.hasKey("attachment") && !options.isNull("attachment")) {
       i = new Intent(Intent.ACTION_SEND);
       i.setType("vnd.android.cursor.dir/email");
